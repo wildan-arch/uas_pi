@@ -1,0 +1,311 @@
+/* 1. RESET & VARIABLE */
+:root {
+  --primary-neon: #00f2ff; /* Cyan */
+  --secondary-neon: #7000ff; /* Purple */
+  --accent-neon: #ff007a; /* Pink */
+  --bg-dark: #0a0a0c;
+  --card-bg: #16161a;
+  --text-light: #ffffff;
+  --text-gray: #b0b0b0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* 2. HEADER & NAVIGATION */
+header {
+  background: rgba(10, 10, 12, 0.9);
+  padding: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--secondary-neon);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primary-neon);
+  text-shadow: 0 0 10px var(--primary-neon);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent-neon);
+  text-shadow: 0 0 8px var(--accent-neon);
+}
+
+/* 3. HERO SECTION */
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1600") no-repeat center center/cover;
+}
+
+.home h2 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow:
+    0 0 20px var(--secondary-neon),
+    0 0 40px var(--primary-neon);
+}
+
+.home .tagline {
+  font-size: 1.5rem;
+  color: var(--primary-neon);
+  margin-bottom: 20px;
+}
+.home p {
+  font-size: 1.2rem;
+  color: var(--text-gray);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.home a {
+  padding: 15px 40px;
+  background: var(--accent-neon);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px var(--accent-neon);
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.home a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px var(--accent-neon);
+}
+
+/* 4. SECTIONS GENERAL */
+section {
+  padding: 80px 10%;
+}
+
+h3 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--primary-neon);
+  text-transform: uppercase;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--secondary-neon), transparent);
+  margin: 0 10%;
+}
+
+/* 5. ABOUT SECTION */
+.about p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: var(--text-gray);
+  max-width: 800px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* 6. LINEUP SECTION*/
+.lineup ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  list-style: none;
+}
+/* STYLE GENERAL TAG FIGURE */
+figure {
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid #333;
+  transition: 0.3s;
+}
+
+figure:hover {
+  border-color: var(--primary-neon);
+  transform: translateY(-10px);
+}
+.lineup ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+
+  flex-wrap: wrap;
+}
+.lineup li {
+  width: 300px;
+}
+
+.artist-image img {
+  width: 100%;
+  height: 300px;
+  aspect-ratio: 3/ 4;
+  object-fit: cover;
+  object-position: center;
+  padding: 10px;
+}
+
+figcaption h4 {
+  color: var(--accent-neon);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* 7. SCHEDULE TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  border: none !important;
+}
+
+th {
+  background: var(--secondary-neon);
+  color: white;
+  padding: 15px;
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid #333;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* 8. TICKETS FORM */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--secondary-neon);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  background: #222;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 8px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  background: var(--primary-neon);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+/* 9. GALLERY SECTION */
+.gallery ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  list-style: none;
+}
+li .gallery-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+li img {
+  width: 100%;
+  height: 150px;
+  aspect-ratio: 3/ 4;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  padding: 10px;
+}
+li figcaption {
+  margin-top: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* 10. FOOTER */
+footer {
+  padding: 50px 10%;
+  text-align: center;
+  background: #000;
+}
+
+footer a {
+  color: var(--primary-neon);
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+  nav ul {
+    margin-top: 15px;
+    gap: 10px;
+    font-size: 0.8rem;
+  }
+  #home h2 {
+    font-size: 2.5rem;
+  }
+}
