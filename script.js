@@ -1,36 +1,29 @@
-// --- JAVASCRIPT SEDERHANA ---
-
-// 1. Logika Tab Jadwal
-const tabButtons = document.querySelectorAll(".tab-btn");
-// const stageContainers = document.querySelector('.stage-containers'); // Nantinya perlu wadah berbeda per hari
-
-tabButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    // Hapus kelas 'active' dari semua tombol
-    tabButtons.forEach((btn) => btn.classList.remove("active"));
-    // Tambah kelas 'active' ke tombol yang diklik
-    button.classList.add("active");
-
-    // LOGIKA TAMBAHAN: Di sini Anda perlu menambahkan logika
-    // untuk mengubah konten jadwal sesuai hari yang diklik.
-    console.log(`Mengubah ke jadwal: ${button.innerText}`);
-  });
+// fungsi agar setiap load berada diatas
+window.addEventListener("load", function () {
+  window.scrollTo(0, 0);
 });
+// fungsi putar preview lagu artis
+function playAudio(id) {
+  const audio = document.getElementById(id);
+  audio.currentTime = 0;
+  audio.volume = 0.5;
 
-// 2. Efek Scroll Navbar (Nanti bisa ditambahkan)
-window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar");
-  if (window.scrollY > 50) {
-    navbar.style.backgroundColor = "rgba(3, 0, 28, 1)"; // Menjadi solid
-  } else {
-    navbar.style.backgroundColor = "rgba(3, 0, 28, 0.9)"; // Transparan kembali
+  // Menangani "Promise" dari play() agar tidak muncul error di konsol
+  const playPromise = audio.play();
+
+  if (playPromise !== undefined) {
+    playPromise
+      .then((_) => {
+        // Audio berhasil diputar
+      })
+      .catch((error) => {
+        // Autoplay diblokir, tampilkan pesan atau abaikan diam-diam
+        console.log("Menunggu interaksi pengguna untuk memutar suara.");
+      });
   }
-});
+}
 
-// 3. Mock Fungsi Beli Tiket
-const buyButtons = document.querySelectorAll(".btn-primary");
-buyButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    alert("Fitur Pembelian Tiket sedang dikembangkan!");
-  });
-});
+function stopAudio(id) {
+  const audio = document.getElementById(id);
+  audio.pause();
+}

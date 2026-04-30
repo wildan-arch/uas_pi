@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shabah Soundcpase</title>
+    <!-- LINK CSS -->
     <link rel="stylesheet" href="style.css" />
+    <!-- LINK AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- 1 HEADER DAN NAVIGASI -->
@@ -36,17 +39,17 @@
       <!-- 2.2 ABOUT SECTION  -->
       <section id="about" class="about">
         <h3>About The Festival</h3>
-        <articel>
-          <p>
+        <article>
+          <p data-aos="fade-left" data-aos-duration="800">
             Tentang konsep festival, Shabah StreamFest 2026 adalah festival musik fiksi yang menggabungkan elemen neon dan malam dengan tema "Neon Nights" yang menargetkan generasi Z. Festival ini dirancang sebagai tempat yang menarik bagi
             pecinta musik untuk bersenang dan menikmati pertunjukan musik terbaik dari berbagai genre. Dengan konsep neon, festival ini menawarkan pengalaman visual yang menarik dengan lampu neon yang menghiasi area festival.
           </p>
-          <p>
+          <p data-aos="fade-right" data-aos-duration="800">
             Festival ini juga berfokus pada keberlanjutan dengan menawarkan fitur eco-friendly. Peserta festival dapat mengikuti program pengumpulan sampah yang akan mengurangi dampak lingkungan dari festival ini. Selain itu, festival ini
             juga menawarkan fitur cashless payment yang memudahkan peserta untuk melakukan pembayaran tanpa menggunakan uang tunai. Dengan menggunakan aplikasi festival khusus, peserta dapat membeli tiket, makanan, dan minuman dengan mudah
             menggunakan sistem pembayaran digital. Dengan konsep ini, festival ini menawarkan pengalaman yang unik dan inovatif bagi pesertanya.
           </p>
-        </articel>
+        </article>
       </section>
 
       <hr />
@@ -55,29 +58,31 @@
         <h3>Artist Lineup</h3>
         <ul>
           <li>
-            <figure class="artist-image">
+            <figure class="artist-image" onmouseenter="playAudio('pre_barasuara')" onmouseleave="stopAudio('pre_barasuara')" data-aos="fade-down" data-aos-duration="800">
               <img src="https://i.pinimg.com/1200x/3d/77/68/3d7768435088578a6becaacd577a6406.jpg" alt="Barasuara" srcset="" width="200" />
-              <figcaption>
+              <figcaption data-aos="fade-down" data-aos-delay="600" data-aos-duration="800">
                 <h4>Barasuara</h4>
                 <p>Genre: Indie Rock</p>
                 <p>Day 1: June 15, 2026</p>
               </figcaption>
+              <audio id="pre_barasuara" src="assets/audio/pre_barasuara.mp3"></audio>
             </figure>
           </li>
           <li>
-            <figure class="artist-image">
+            <figure class="artist-image" data-aos="fade-down" onmouseenter="playAudio('pre_bernadya')" onmouseleave="stopAudio('pre_bernadya')" data-aos-duration="800">
               <img src="assets/images/bernadya.jpg" alt="Bernadya" srcset="" width="200" />
-              <figcaption>
+              <figcaption data-aos="fade-down" data-aos-delay="600" data-aos-duration="800">
                 <h4>Bernadya</h4>
                 <p>Genre: Pop, Bedroom Pop</p>
                 <p>Day 1: June 15, 2026</p>
               </figcaption>
+              <audio id="pre_bernadya" src="assets/audio/pre_bernadya.mp3"></audio>
             </figure>
           </li>
           <li>
-            <figure class="artist-image">
+            <figure class="artist-image" data-aos="fade-down" data-aos-duration="500">
               <img src="assets/images/feast.jpg" alt=".Feast" srcset="" width="200" />
-              <figcaption>
+              <figcaption data-aos="fade-down" data-aos-delay="600" data-aos-duration="800">
                 <h4>.Feast</h4>
                 <p>Genre: Rock Alternatif / Indie Rock</p>
                 <p>Day 2: June 16, 2026</p>
@@ -85,9 +90,9 @@
             </figure>
           </li>
           <li>
-            <figure class="artist-image">
+            <figure class="artist-image" data-aos="fade-down" data-aos-duration="800">
               <img src="assets/images/tulus.jpg" alt="Tulus" srcset="" width="200" />
-              <figcaption>
+              <figcaption data-aos="fade-down" data-aos-delay="600" data-aos-duration="800">
                 <h4>Tulus</h4>
                 <p>Genre: Pop dan Jazz</p>
                 <p>Day 2: June 16, 2026</p>
@@ -95,19 +100,19 @@
             </figure>
           </li>
           <li>
-            <figure class="artist-image">
+            <figure class="artist-image" data-aos="fade-down" data-aos-duration="800">
               <img src="assets/images/juicy_lucy.jpg" alt="juicy_lucy" srcset="" width="200" />
-              <figcaption>
-                <h4>juicy Luicy</h4>
+              <figcaption data-aos="fade-down" data-aos-delay="600" data-aos-duration="800">
+                <h4>Juicy Luicy</h4>
                 <p>Genre: Pop dan R&B</p>
                 <p>Day 3: June 17, 2026</p>
               </figcaption>
             </figure>
           </li>
           <li>
-            <figure class="artist-image">
+            <figure class="artist-image" data-aos="fade-down" data-aos-duration="800">
               <img src="assets/images/salma.jpg" alt="Salma Salsabil" srcset="" width="200" />
-              <figcaption>
+              <figcaption data-aos="fade-down" data-aos-delay="600" data-aos-duration="800">
                 <h4>Salma Salsabil</h4>
                 <p>Genre: Pop, Pop Kreatif, R&B.</p>
                 <p>Day 3: June 17, 2026</p>
@@ -122,7 +127,7 @@
       <!-- 2.4 SCHEDULE SECTION -->
       <section id="schedule" class="schedule">
         <h3>Festival Schedule</h3>
-        <table border="1" cellspacing="0" cellpadding="10">
+        <table border="1" cellspacing="0" cellpadding="10" data-aos="zoom-in" data-aos-duration="800">
           <thead>
             <tr>
               <th>Time</th>
@@ -220,7 +225,7 @@
       <!-- 2.5 TICKETS SECTION -->
       <section id="tickets" class="tickets">
         <h3>Get Your Tickets</h3>
-        <form action="">
+        <form action="" method="post" data-aos="zoom-out" data-aos-duration="800">
           <label for="fullname">Full Name</label> <br />
           <input type="text" id="fullname" name="fullname" required autocomplete="off" autofocus /> <br />
           <label for="email">Email</label> <br />
@@ -237,7 +242,7 @@
           <label for="vip">VIP (Rp. 1.500.000)</label>
           <br />
           <input type="radio" name="ticket_type" id="vvip" />
-          <label for="vvip">VVIP (Rp. 1.500.000)</label>
+          <label for="vvip">VVIP (Rp. 2.500.000)</label>
           <br />
           <label for="quantity">Quantity:</label> <br />
           <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" />
@@ -259,43 +264,43 @@
         <h3>Festival Highlight 2025</h3>
         <ul>
           <li>
-            <figure class="gallery-image">
+            <figure class="gallery-image" data-aos="fade-down" data-aos-duration="800">
               <img src="assets/gallery/1.png" alt="Crowd Vibes" srcset="" width="300" />
               <figcaption>Crowd Vibes at Main Stage 2025</figcaption>
             </figure>
           </li>
           <li>
-            <figure class="gallery-image">
+            <figure class="gallery-image" data-aos="fade-down" data-aos-duration="800">
               <img src="assets/gallery/2.png" alt="Neon Vibes" srcset="" width="300" />
               <figcaption>Neon Vibes at Side Stage 2025</figcaption>
             </figure>
           </li>
           <li>
-            <figure class="gallery-image">
+            <figure class="gallery-image" data-aos="fade-down" data-aos-duration="800">
               <img src="assets/gallery/3.png" alt="Crowd Vibes" srcset="" width="300" />
               <figcaption>Crowd Vibes at Main Stage 2025</figcaption>
             </figure>
           </li>
           <li>
-            <figure class="gallery-image">
+            <figure class="gallery-image" data-aos="fade-down" data-aos-duration="800">
               <img src="assets/gallery/4.png" alt="Crowd Vibes" srcset="" width="300" />
               <figcaption>Artist Vibes</figcaption>
             </figure>
           </li>
           <li>
-            <figure class="gallery-image">
+            <figure class="gallery-image" data-aos="fade-down" data-aos-duration="800">
               <img src="assets/gallery/5.png" alt="Punk Vibes" srcset="" width="300" />
               <figcaption>Punk Vibes</figcaption>
             </figure>
           </li>
           <li>
-            <figure class="gallery-image">
+            <figure class="gallery-image" data-aos="fade-down" data-aos-duration="800">
               <img src="assets/gallery/6.png" alt="Food Court & fireworks" srcset="" width="300" />
               <figcaption>Food Court & fireworks</figcaption>
             </figure>
           </li>
           <li>
-            <figure class="gallery-image">
+            <figure class="gallery-image" data-aos="fade-down" data-aos-duration="800">
               <img src="assets/gallery/1.png" alt="Crowd Vibes" srcset="" width="300" />
               <figcaption>Crowd Vibes at Main Stage 2025</figcaption>
             </figure>
@@ -311,8 +316,8 @@
       <p>&copy; 2026 Shabah StreamFest. All Rights Reserved</p>
       <p>
         Follow Us:
-        <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="#" target="_blank" rel="noopener noreferrer">Tiktok</a>
+        <a href="https://www.instagram.com/mas_danfp/?hl=en" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.tiktok.com/@kuduturuuu" target="_blank" rel="noopener noreferrer">Tiktok</a>
         <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
         <a href="#" target="_blank" rel="noopener noreferrer">Youtube</a>
       </p>
@@ -320,5 +325,16 @@
         <a href="mailto:hello@shabahstreamfest.com">hello@shabahstreamfest.com</a>
       </p>
     </footer>
+    <!-- SCRIPTKU -->
+    <script src="script.js"></script>
+    <!-- LINK AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: false,
+        mirror: true,
+      });
+    </script>
   </body>
 </html>
