@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
 function playAudio(id) {
   const audio = document.getElementById(id);
   audio.currentTime = 0;
-  audio.volume = 0.5;
+  audio.volume = 0.8;
 
   // Menangani "Promise" dari play() agar tidak muncul error di konsol
   const playPromise = audio.play();
