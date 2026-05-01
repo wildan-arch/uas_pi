@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="style.css" />
     <!-- LINK AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- LINK LUCIDE -->
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
     <!-- 1 HEADER DAN NAVIGASI -->
     <header>
       <h1>Shabah StreamFest 2026</h1>
-      <nav>
+      <button class="menu-toggle" id="menuToggle"><i data-lucide="menu"></i></button>
+      <nav class="active" id="nav">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -361,6 +364,10 @@
         once: false,
         mirror: true,
       });
+    </script>
+    <!-- icon -->
+    <script>
+      lucide.createIcons();
     </script>
   </body>
 </html>

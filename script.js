@@ -49,3 +49,23 @@ const x = setInterval(function () {
     document.getElementById("timer").innerHTML = "FESTIVAL STARTED!";
   }
 }, 1000);
+
+// menu toggle
+const menuToggle = document.getElementById("menuToggle");
+const nav = document.getElementById("nav");
+
+menuToggle.addEventListener("click", function (e) {
+  e.preventDefault();
+  const isActive = nav.classList.toggle("active");
+
+  // Opsional: Update aksesibilitas
+  menuToggle.setAttribute("aria-expanded", isActive);
+});
+
+document.addEventListener("click", function (event) {
+  // Jika menu sedang aktif dan yang diklik bukan bagian dari nav/toggle
+  if (nav.classList.contains("active") && !nav.contains(event.target) && !menuToggle.contains(event.target)) {
+    nav.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+  }
+});

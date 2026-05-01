@@ -46,6 +46,9 @@ header h1 {
   color: var(--primary-neon);
   text-shadow: 0 0 10px var(--primary-neon);
 }
+.menu-toggle {
+  display: none;
+}
 
 nav ul {
   list-style: none;
@@ -417,5 +420,56 @@ footer a {
   }
   .home h2 {
     font-size: 2.5rem;
+  }
+}
+@media (max-width: 460px) {
+  .menu-toggle {
+    display: flex; /* Cocok untuk centering ikon di dalam tombol */
+    align-items: center;
+    justify-content: center;
+
+    color: var(--primary-neon);
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: 0.3s;
+
+    /* Gunakan ini jika parent-nya flexbox */
+    margin-left: auto;
+
+    /* Berikan padding agar area sentuh (touch target) lebih luas */
+    padding: 10px;
+  }
+
+  .menu-toggle:hover {
+    text-shadow: 0 0 10px var(--primary-neon); /* Memberikan efek glow saat di-hover */
+    transform: scale(1.1);
+  }
+
+  nav {
+    display: flex; /* Ubah dari none ke flex saat aktif */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100%; /* Muncul tepat di bawah navbar */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Latar gelap transparan */
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--primary-neon);
+
+    /* Animasi awal (tersembunyi) */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 0.3s ease;
+  }
+
+  nav.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 }
