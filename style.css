@@ -46,9 +46,9 @@ header h1 {
   color: var(--primary-neon);
   text-shadow: 0 0 10px var(--primary-neon);
 }
-.menu-toggle {
+/* .menu-toggle {
   display: none;
-}
+} */
 
 nav ul {
   list-style: none;
@@ -422,7 +422,7 @@ footer a {
     font-size: 2.5rem;
   }
 }
-@media (max-width: 460px) {
+/* @media (max-width: 460px) {
   .menu-toggle {
     display: flex; /* Cocok untuk centering ikon di dalam tombol */
     align-items: center;
@@ -448,28 +448,17 @@ footer a {
   }
 
   nav {
-    display: flex; /* Ubah dari none ke flex saat aktif */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 100%; /* Muncul tepat di bawah navbar */
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.9); /* Latar gelap transparan */
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid var(--primary-neon);
-
-    /* Animasi awal (tersembunyi) */
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: 0.3s ease;
+    /* Sembunyikan total secara fungsional */
+    display: none;
   }
 
+  /* Gunakan selektor yang lebih spesifik */
   nav.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
-}
+} */
